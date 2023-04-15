@@ -1,0 +1,9 @@
+-numsrc 10000					%number of source points
+-numtrg 20000					%number of target points (where the potential needs to be evaluated)
+-kt 111                    %laplace equation, single layer, evaluating potential
+
+-fmm3d_np 4						%np=4 low accuracy, np=6 mid accuracy, np=8 high accuracy
+-fmm3d_let3d_ptsmax 150		%max number of points allowed in the leaf nodes of the quad tree
+-fmm3d_let3d_maxlevel 10	%max number of levels
+
+

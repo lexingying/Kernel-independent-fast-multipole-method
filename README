@@ -1,0 +1,26 @@
+//---------------------------------------
+To compile the code
+
+1. make sure fftw-2.1.5, blas and lapack libraries are installed, and
+change the library path variable LIBS in makefile.opt accordingly.
+
+2. go to directory common, and type
+	make libkifmm3d.a
+
+3. go to directory fmm3d, and type
+	make libkifmm3d.a
+
+4. go to directory fmm3d, and type
+	make tt
+
+//---------------------------------------
+To run the test examples:
+
+go to fmm3d, and try the following:
+(1) single layer laplace kernel, low accuracy
+	tt options_0
+(2) double layer stokes kernel, mid accuracy
+	tt options_1
+(3) single layer navier kernel, high accuracy
+	tt options_2
+

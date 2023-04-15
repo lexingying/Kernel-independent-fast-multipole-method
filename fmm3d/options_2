@@ -1,0 +1,9 @@
+-numsrc 10000
+-numtrg 20000
+-kt 511	                 %navier equation, single layer, evaluating elastic potential
+
+-fmm3d_np 8
+-fmm3d_let3d_ptsmax 150
+-fmm3d_let3d_maxlevel 10
+
+

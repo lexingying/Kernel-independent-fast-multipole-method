@@ -1,0 +1,9 @@
+-numsrc 10000
+-numtrg 20000
+-kt 321	                 %stokes equation, double layer, evaluating hydrostatic potential
+
+-fmm3d_np 6
+-fmm3d_let3d_ptsmax 150
+-fmm3d_let3d_maxlevel 10
+
+

@@ -1,0 +1,43 @@
+# ----------------------------machine dependent file
+MODE = optim
+
+# compiler and linker variable 
+INCLUDES = -I..
+
+LIBS = -lrfftw -lfftw -llapack -lblas
+
+AR = ar
+ARFLAGS = -r
+
+CC  = gcc
+CXX = g++
+
+# -Wall -Wno-sign-compare 
+CFLAGS   = -g -Wall -W -Wno-sign-compare -Wno-unused-label -MMD ${INCLUDES}
+CXXFLAGS = -g -Wall -W -Wno-sign-compare -Wno-unused-label -MMD ${INCLUDES}
+ifeq ($(MODE),debug)
+else
+	CFLAGS 	+= -O4 -DNDEBUG
+	CXXFLAGS += -O4 -DNDEBUG
+endif
+
+LDFLAGS = ${LIBS}
+
+MEX = mex
+
+RANLIB = ranlib
+
+# rules
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $*.cpp
+
+#------------------------------------------------------
+tilde:
+	rm -f *~
+
+clean:
+	rm -rf *~ *.d *.o *.out
+
+tags:
+	etags *.hpp *.cpp
+
